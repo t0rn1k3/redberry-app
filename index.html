@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://kit.fontawesome.com/1d77aaa3bf.js" crossorigin="anonymous"></script>
     <link rel="stylesheet" href="css/styles.css">
     <title>Tornike Burjanadze</title>
 </head>
@@ -19,6 +20,76 @@
             <div class="start-button" id="buttonStart">
                 რეზიუმეს დამატება
             </div>
+        </div>
+
+        <!-- personal information page -->
+
+        <div class="personal-info" id="personalInfo">
+           <div class="first-part">
+            <div class="heading">
+                <h2>პირადი ინფო</h2>
+                <span>1/3</span>
+            </div>
+            <div class="carousel-slider">
+                <form action="" id="form" class="form" method="post">
+                    <div class="full-input">
+                        <div class="name">
+                            <label class="label" for="firstName">სახელი</label>
+                            <div class="icons input">
+                                <input type="text" id="firstName" name="firstName" required>
+                                <i class="fa-solid fa-circle-check"></i>
+                                <i class="fa-solid fa-triangle-exclamation"></i>
+                            </div>
+                            <p class="validation-logic">მინიმუმ 2 ასო, ქართული ასოები</p>
+                        </div>
+                        <div class="name">
+                            <label class="label" for="lastName">გვარი</label>
+                            <div class="icons input">
+                                <input type="text" id="lastName" name="lastName" required>
+                                <i class="fa-solid fa-circle-check"></i>
+                                <i class="fa-solid fa-triangle-exclamation"></i>
+                            </div>
+                            <p class="validation-logic">მინიმუმ 2 ასო, ქართული ასოები</p>
+                        </div>
+                    </div>
+                    <div class="file-upload">
+                        <label for="file">
+                            <p>პირადი ფოტოს ატვირთვა</p>              
+                            <p class="upload">ატვირთვა</p>
+                        </label>
+                        <input type="file" name="file" id="file" accept="image/png, image/jpg, image/gif, image/jpeg">
+                    </div>
+                    <div class="about-me">
+                        <label>ჩემ შესახებ (არასავალდებულო)</label>
+                        <textarea name="aboutMe" id="aboutMe" cols="30" rows="5" placeholder="ზოგადი ინფორმაცია შენ შესახებ"></textarea>
+                    </div>
+                    <div class="email margin">
+                        <label class="label" for="email">ელ.ფოსტა</label>
+                        <div class="icons input">
+                            <input type="email" id="email" name="email" placeholder="example@redberry.ge" required>
+                            <i class="fa-solid fa-circle-check"></i>
+                            <i class="fa-solid fa-triangle-exclamation"></i>
+                        </div>
+                        <p class="validation-logic">უნდა მთავრდებოდეს @redberry.ge-ით</p>
+                    </div>
+                    <div class="phone margin">
+                        <label class="label" for="phone">მობილურის ნომერი</label>
+                        <div class="icons input">
+                            <input type="tel" id="phone" name="phone" placeholder="+995 5** ** ** **" required>
+                            <i class="fa-solid fa-circle-check"></i>
+                            <i class="fa-solid fa-triangle-exclamation"></i>
+                        </div>
+                        <p class="validation-logic">უნდა აკმაყოფილებდეს ქართული მობილურის ნომრის ფორმატს</p>
+                    </div>
+                </form>
+            </div>
+            <div class="button-next" id="buttonNext">შემდეგი</div>
+           </div>
+           <div class="second-part">
+            <div class="logo2">
+                <img src="assets/images/logo2.png" alt="logo2">
+            </div>
+           </div>
         </div>
     </div>
 
