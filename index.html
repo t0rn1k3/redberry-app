@@ -26,64 +26,179 @@
 
         <div class="personal-info" id="personalInfo">
            <div class="first-part">
-            <div class="heading">
-                <h2>პირადი ინფო</h2>
-                <span>1/3</span>
-            </div>
-            <div class="carousel-slider">
+            <div class="form-container">
                 <form action="" id="form" class="form" method="post">
-                    <div class="full-input">
-                        <div class="name">
-                            <label class="label" for="firstName">სახელი</label>
-                            <div class="icons input">
-                                <input type="text" id="firstName" name="firstName" required>
-                                <i class="fa-solid fa-circle-check"></i>
-                                <i class="fa-solid fa-triangle-exclamation"></i>
+                    <div class="carousel-slider">
+                        <div class="content content-visible ">
+                            <div class="heading">
+                                <h2>პირადი ინფორმაცია</h2>
+                                <span>1/3</span>
                             </div>
-                            <p class="validation-logic">მინიმუმ 2 ასო, ქართული ასოები</p>
-                        </div>
-                        <div class="name">
-                            <label class="label" for="lastName">გვარი</label>
-                            <div class="icons input">
-                                <input type="text" id="lastName" name="lastName" required>
-                                <i class="fa-solid fa-circle-check"></i>
-                                <i class="fa-solid fa-triangle-exclamation"></i>
+                            <div class="full-input">
+                                <div class="name">
+                                    <label class="label" for="firstName">სახელი</label>
+                                    <div class="icons input">
+                                        <input 
+                                            type="text" 
+                                            id="firstName" 
+                                            name="firstName"  
+                                            required>
+                                        <i class="fa-solid fa-circle-check"></i>
+                                        <i class="fa-solid fa-triangle-exclamation"></i>
+                                    </div>
+                                    <p class="validation-logic">მინიმუმ 2 ასო, ქართული ასოები</p>
+                                </div>
+                                <div class="name">
+                                    <label class="label" for="lastName">გვარი</label>
+                                    <div class="icons input">
+                                        <input 
+                                            type="text" 
+                                            id="lastName" 
+                                            name="lastName"  
+                                            required>
+                                        <i class="fa-solid fa-circle-check"></i>
+                                        <i class="fa-solid fa-triangle-exclamation"></i>
+                                    </div>
+                                    <p class="validation-logic">მინიმუმ 2 ასო, ქართული ასოები</p>
+                                </div>
                             </div>
-                            <p class="validation-logic">მინიმუმ 2 ასო, ქართული ასოები</p>
+                            <div class="file-upload">
+                                <label for="file">
+                                    <p>პირადი ფოტოს ატვირთვა</p>              
+                                    <p class="upload">ატვირთვა</p>
+                                </label>
+                                <input type="file" name="file" id="file" accept="image/png, image/jpg, image/gif, image/jpeg">
+                            </div>
+                            <div class="textarea">
+                                <label>ჩემ შესახებ (არასავალდებულო)</label>
+                                <textarea name="aboutMe" id="aboutMe" cols="30" rows="5" placeholder="ზოგადი ინფორმაცია შენ შესახებ"></textarea>
+                            </div>
+                            <div class="email margin">
+                                <label class="label" for="email">ელ.ფოსტა</label>
+                                <div class="icons input">
+                                    <input type="email" id="email" name="email" placeholder="example@redberry.ge" required>
+                                    <i class="fa-solid fa-circle-check"></i>
+                                    <i class="fa-solid fa-triangle-exclamation"></i>
+                                </div>
+                                <p class="validation-logic">უნდა მთავრდებოდეს @redberry.ge-ით</p>
+                            </div>
+                            <div class="phone margin">
+                                <label class="label" for="phone">მობილურის ნომერი</label>
+                                <div class="icons input">
+                                    <input type="tel" id="phone" name="phone" placeholder="+995 5** ** ** **" required>
+                                    <i class="fa-solid fa-circle-check"></i>
+                                    <i class="fa-solid fa-triangle-exclamation"></i>
+                                </div>
+                                <p class="validation-logic">უნდა აკმაყოფილებდეს ქართული მობილურის ნომრის ფორმატს</p>
+                            </div>
                         </div>
-                    </div>
-                    <div class="file-upload">
-                        <label for="file">
-                            <p>პირადი ფოტოს ატვირთვა</p>              
-                            <p class="upload">ატვირთვა</p>
-                        </label>
-                        <input type="file" name="file" id="file" accept="image/png, image/jpg, image/gif, image/jpeg">
-                    </div>
-                    <div class="about-me">
-                        <label>ჩემ შესახებ (არასავალდებულო)</label>
-                        <textarea name="aboutMe" id="aboutMe" cols="30" rows="5" placeholder="ზოგადი ინფორმაცია შენ შესახებ"></textarea>
-                    </div>
-                    <div class="email margin">
-                        <label class="label" for="email">ელ.ფოსტა</label>
-                        <div class="icons input">
-                            <input type="email" id="email" name="email" placeholder="example@redberry.ge" required>
-                            <i class="fa-solid fa-circle-check"></i>
-                            <i class="fa-solid fa-triangle-exclamation"></i>
+        <!-- position page -->
+                        <div class="content content-visible">
+                            <div class="heading">
+                                <h2>გამოცდილება</h2>
+                                <span>2/3</span>
+                            </div>
+                            <div class="margin">
+                                <label class="label" for="position">თანამდებობა</label>
+                                <div class="icons input">
+                                    <input type="text" id="position" name="position" placeholder="დეველოპერი, დიზაინერი, ა.შ." required>
+                                    <i class="fa-solid fa-circle-check"></i>
+                                    <i class="fa-solid fa-triangle-exclamation"></i>
+                                </div>
+                                <p class="validation-logic">მინიმუმ 2 სიმბოლო</p>
+                            </div>
+                            <div class="margin">
+                                <label class="label" for="emloyer">დამსაქმებელი</label>
+                                <div class="icons input">
+                                    <input type="tex" id="emloyer" name="emloyer" placeholder="დამსაქმებელი" required>
+                                    <i class="fa-solid fa-circle-check"></i>
+                                    <i class="fa-solid fa-triangle-exclamation"></i>
+                                </div>
+                                <p class="validation-logic">მინიმუმ 2 სიმბოლო</p>
+                            </div>
+                            <div class="full-input">
+                                <div class="name">
+                                    <label class="label" for="startDate">დაწყების რიცხვი</label>
+                                    <div class="icons input">
+                                        <input 
+                                            type="date" 
+                                            id="startDate" 
+                                            name="startDate"  
+                                            required>
+                                    </div>
+                                </div>
+                                <div class="name">
+                                    <label class="label" for="endingDate">დამთავრების რიცხვი</label>
+                                    <div class="icons input">
+                                        <input 
+                                            type="date" 
+                                            id="endingDate" 
+                                            name="endingDate"  
+                                            required>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="textarea">
+                                <label>აღწერა</label>
+                                <textarea name="role" id="role" cols="30" rows="5" placeholder="როლი თანამდებობაზე და ზოგადი აღწერა"></textarea>
+                            </div>
+                            <div class="add-position" id="addPosition">
+                                მეტი გამოცდილების დამატებას
+                            </div>
                         </div>
-                        <p class="validation-logic">უნდა მთავრდებოდეს @redberry.ge-ით</p>
-                    </div>
-                    <div class="phone margin">
-                        <label class="label" for="phone">მობილურის ნომერი</label>
-                        <div class="icons input">
-                            <input type="tel" id="phone" name="phone" placeholder="+995 5** ** ** **" required>
-                            <i class="fa-solid fa-circle-check"></i>
-                            <i class="fa-solid fa-triangle-exclamation"></i>
+        <!-- education page -->
+                        <div class="content">
+                            <div class="heading">
+                                <h2>განათლება</h2>
+                                <span>3/3</span>
+                            </div>
+                            <div class="margin">
+                                <label class="label" for="univercity">სასწავლებელი</label>
+                                <div class="icons input">
+                                    <input type="text" id="univercity" name="univercity" placeholder="სასწავლებელი" required>
+                                    <i class="fa-solid fa-circle-check"></i>
+                                    <i class="fa-solid fa-triangle-exclamation"></i>
+                                </div>
+                                <p class="validation-logic">მინიმუმ 2 სიმბოლო</p>
+                            </div>
+                            <div class="full-input">
+                                <div class="name">
+                                    <label class="label" for="degree">ხარისხი</label>
+                                    <div class="icons input">
+                                        <select name="cars" id="cars">
+                                            <option value="volvo">Volvo</option>
+                                            <option value="saab">Saab</option>
+                                            <option value="opel">Opel</option>
+                                            <option value="audi">Audi</option>
+                                          </select>
+                                    </div>
+                                </div>
+                                <div class="name">
+                                    <label class="label" for="endingDate">დამთავრების რიცხვი</label>
+                                    <div class="icons input">
+                                        <input 
+                                            type="date" 
+                                            id="endingDate" 
+                                            name="endingDate"  
+                                            required>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="textarea">
+                                <label>აღწერა</label>
+                                <textarea name="description" id="description" cols="30" rows="5" placeholder="როლი თანამდებობაზე და ზოგადი აღწერა"></textarea>
+                            </div>
+                            <div class="add-button" id="addunivercity">
+                                სხვა სასწავლებლის დამატება
+                            </div>
                         </div>
-                        <p class="validation-logic">უნდა აკმაყოფილებდეს ქართული მობილურის ნომრის ფორმატს</p>
                     </div>
                 </form>
             </div>
-            <div class="button-next" id="buttonNext">შემდეგი</div>
+            <div class="next-button-cont">
+                <button class="button btn-prev" id="buttonPrev">უკან</button>
+                <button class="button btn-next" id="buttonNext">შემდეგი</button>
+            </div>
            </div>
            <div class="second-part">
             <div class="logo2">
@@ -97,5 +212,6 @@
 
     <script src="js/scripts.js"></script>
     <script src="js/welcome-page.js"></script>
+    <script src="js/form.js"></script>
 </body>
 </html>
