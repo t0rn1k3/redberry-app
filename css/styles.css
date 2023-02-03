@@ -29,7 +29,6 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    display: none;
 }
 .header {
     width: 90%;
@@ -53,6 +52,7 @@
 .personal-info {
     display: flex;
     height: 100vh;
+    display: none;
 } 
 .first-part {
     width: 50%;
@@ -99,11 +99,6 @@ select {
 input {
     width: 100%;
     transition: all 0.3s;
-}
-input:valid {
-    border: 1px solid var(--checked);
-}
-.input input {
     padding: 17px;
     color: var(--opacity);
     font-size: 16px;
@@ -112,6 +107,9 @@ input:valid {
     border: 1px solid var(--opacity);
     border-radius: 4px;
     margin: 10px 0;
+}
+input:valid {
+    border: 1px solid var(--checked);
 }
 .validation-logic {
     font-size: 14px;
@@ -123,6 +121,7 @@ input:valid {
     right: 20px;
     top: 50%;
     transform: translateY(-50%);
+    display: none;
 }
 .fa-triangle-exclamation {
     color: var(--error);
@@ -130,6 +129,7 @@ input:valid {
     right: -30px;
     top: 50%;
     transform: translateY(-50%);
+    display: none;
 }
 #file {
     display: none;
@@ -224,3 +224,53 @@ textarea {
     color: white;
 }
 
+
+/* typed values styles */
+
+.second-part {
+    width: 50%;
+}
+.result-first-part {
+    width: 80%;
+    margin: 50px auto;
+    display: flex;
+    justify-content: space-between;
+}
+.typed-names {
+    width: 300px;
+    display: flex;
+    justify-content: space-between;
+}
+.typed-name {
+    color:  #F93B1D;
+    font-size: 34px;
+    font-weight: 700;
+}
+.typed-contacts{
+    margin-top: 30px;
+    color: var(--black);
+    font-size: 18px;
+}
+.typed-about {
+    margin-top: 30px;
+}
+.typed-about h3 {
+    color: #f9381d;
+    font-size: 18px;
+    font-weight: 700;
+}
+.typed-about-info {
+    width: 430px;
+    line-height: 25px;
+    margin: 20px 0;
+}
+.uploaded-picture {
+    width: 246px;
+    height: 246px;
+}
+.uploaded-picture img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 50%;
+}
