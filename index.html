@@ -68,7 +68,7 @@
                                             <p>პირადი ფოტოს ატვირთვა</p>              
                                             <p class="upload">ატვირთვა</p>
                                         </label>
-                                        <input type="file" name="file" id="file" accept="image/png, image/jpg, image/gif, image/jpeg">
+                                        <input type="file" name="file" id="file" accept="image/*">
                                     </div>
                                     <div class="textarea">
                                         <label>ჩემ შესახებ (არასავალდებულო)</label>
@@ -86,7 +86,7 @@
                                     <div class="phone margin">
                                         <label class="label" for="phone">მობილურის ნომერი</label>
                                         <div class="icons input">
-                                            <input type="tel" id="phone" name="phone" placeholder="+995 5** ** ** **" required>
+                                            <input type="number" id="phone" name="phone" placeholder="+995 5** ** ** **" required>
                                             <i class="fa-solid fa-circle-check"></i>
                                             <i class="fa-solid fa-triangle-exclamation"></i>
                                         </div>
@@ -166,11 +166,8 @@
                                         <div class="name">
                                             <label class="label" for="degree">ხარისხი</label>
                                             <div class="icons input">
-                                                <select name="cars" id="cars">
-                                                    <option value="volvo">Volvo</option>
-                                                    <option value="saab">Saab</option>
-                                                    <option value="opel">Opel</option>
-                                                    <option value="audi">Audi</option>
+                                                <select name="degrees" id="degrees">
+                                                    <option>აირჩიეთ ხარისხი</option>
                                                 </select>
                                             </div>
                                         </div>
@@ -212,13 +209,11 @@
                         <div class="typed-email" id="typedEmail"></div>
                         <div class="typed-tel" id="typedTel"></div>
                     </div>
-                    <div class="typed-about">
-                        <h3>ჩემ შესახებ</h3>
+                    <div id="typedAbout" class="typed-about">
                         <div class="typed-about-info" id="typedAboutInfo"></div>
                     </div>
                 </div>
                 <div class="uploaded-picture" id="uploadedPicture">
-                    <img src="https://media.sproutsocial.com/uploads/2022/06/profile-picture.jpeg" alt="profile-picture">
                 </div>
             </div>
             <div class="logo2">
@@ -232,5 +227,7 @@
 
     <script src="js/scripts.js"></script>
     <script src="js/keyUp.js"></script>
+    <script src="js/slider.js"></script>
+    <script src="js/getApi.js"></script>
 </body>
 </html>

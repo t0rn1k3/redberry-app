@@ -1,8 +1,3 @@
-
-
-
-
-
 let currentActive = 1;
 
 function keyUpName() {
@@ -16,7 +11,7 @@ function keyUpName() {
     typedLastName.innerHTML = lName.value;
     typedEmail.innerHTML = email.value;
     typedTel.innerHTML = tel.value;
-    typedAboutInfo.innerHTML = aboutMe.value;
+    typedAbout.innerHTML = `<h3> ჩემ შესახებ </h3> <div>${aboutMe.value}</div>`;
 }
 
 
@@ -35,3 +30,15 @@ tel.addEventListener('keyup', () => {
 aboutMe.addEventListener('keyup', () => {
     keyUpName();
 })
+
+//display image 
+
+
+// file.addEventListener('change', () => {
+//     const reader = new FileReader();
+//     reader.addEventListener('load', () => {
+//         uploadedPicture = reader.result;
+//         uploadedPicture.style.backgroundImage = `url(${file})`
+//     });
+//     reader.readAsDataURL(this.files[0])
+// })

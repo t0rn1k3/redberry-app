@@ -277,10 +277,11 @@ textarea {
     font-size: 18px;
     font-weight: 700;
 }
-.typed-about-info {
+.typed-about div {
     width: 430px;
     line-height: 25px;
     margin: 20px 0;
+    word-wrap: break-word;
 }
 .uploaded-picture {
     width: 246px;

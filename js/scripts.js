@@ -9,12 +9,17 @@ const lName = document.getElementById('lastName');
 const email = document.getElementById('email');
 const tel = document.getElementById('phone');
 const aboutMe = document.getElementById('aboutMe');
+const file = document.getElementById('file');
+const degrees = document.getElementById('degrees');
 
 const typedFirstName = document.getElementById('typedFirstName');
 const typedLastName = document.getElementById('typedLastName');
 const typedEmail = document.getElementById('typedEmail');
 const typedTel = document.getElementById('typedTel');
+const typedAbout = document.getElementById('typedAbout');
 const typedAboutInfo = document.getElementById('typedAboutInfo');
+const uploadedPicture = document.getElementById('uploadedPicture');
+
 
 const slideContent = document.querySelectorAll('.content');
 
@@ -27,48 +32,4 @@ start.addEventListener('click', () => {
 })
 
 
-
-let slidePosition = 0;
-const totalSlides = slideContent.length;
-
-function newSlidePosition() {
-    for (let slide of slideContent) {
-        slide.classList.remove('content-visible');
-        slide.classList.add('content-hidden');
-    }
-    slideContent[slidePosition].classList.add('content-visible');
-}
-
-//move to next button
-
-function moveToNext() {
-    if (slidePosition === totalSlides - 1) {
-        slidePosition = 0;
-    }else {
-        slidePosition++;
-    }
-
-    newSlidePosition();
-}
-
-//move to prev button
-
-function moveToPrev() {
-    if (slidePosition === 0) {
-        slidePosition = 0;
-    }else {
-        slidePosition--;
-    }
-
-    newSlidePosition();
-}
-
-
-buttonNext.addEventListener('click', () => {
-    moveToNext()
-})
-
-buttonPrev.addEventListener('click', () => {
-    moveToPrev();
-})
 
