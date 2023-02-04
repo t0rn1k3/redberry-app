@@ -47,6 +47,19 @@
     text-align: center;
 }
 
+/* // carousel */
+.content {
+    display: block;
+}
+.carousel-slide .content,
+.carousel-slide .content-hidden {
+    display: none;
+}
+
+.carousel-slide .content-visible {
+    display: block;
+}
+
 /* form input styling */
 
 .personal-info {
@@ -223,6 +236,8 @@ textarea {
     margin-top: 70px;
     color: white;
 }
+
+
 
 
 /* typed values styles */
