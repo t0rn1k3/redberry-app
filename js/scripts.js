@@ -3,11 +3,21 @@ const personalInfo = document.getElementById('personalInfo');
 const start = document.getElementById('buttonStart');
 const buttonPrev = document.getElementById('buttonPrev');
 const buttonNext = document.getElementById('buttonNext');
+
 const fName = document.getElementById('firstName');
 const lName = document.getElementById('lastName');
+const email = document.getElementById('email');
+const tel = document.getElementById('phone');
+const aboutMe = document.getElementById('aboutMe');
+
 const typedFirstName = document.getElementById('typedFirstName');
 const typedLastName = document.getElementById('typedLastName');
-const slideContent = document.querySelectorAll('.content')
+const typedEmail = document.getElementById('typedEmail');
+const typedTel = document.getElementById('typedTel');
+const typedAboutInfo = document.getElementById('typedAboutInfo');
+
+const slideContent = document.querySelectorAll('.content');
+
 
 //start test 
 
@@ -16,22 +26,6 @@ start.addEventListener('click', () => {
     personalInfo.style.display = 'flex';
 })
 
-
-let currentActive = 1;
-
-function keyUp() {
-    if (fName.value.length > 2) {
-        fName.style.border = '1px solid #98E37E';  
-    }
-    document.getElementById('typedFirstName').innerHTML = fName.value
-    document.getElementById('typedLastName').innerHTML = lName.value
-    console.log()
-}
-
-
-fName.addEventListener('keyup', () => {
-    keyUp();
-})
 
 
 let slidePosition = 0;

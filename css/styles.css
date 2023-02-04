@@ -261,6 +261,9 @@ textarea {
     font-size: 34px;
     font-weight: 700;
 }
+#typedLastName {
+    padding: 0 15px;
+}
 .typed-contacts{
     margin-top: 30px;
     color: var(--black);
