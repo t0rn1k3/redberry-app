@@ -20,6 +20,14 @@ const typedAbout = document.getElementById('typedAbout');
 const typedAboutInfo = document.getElementById('typedAboutInfo');
 const uploadedPicture = document.getElementById('uploadedPicture');
 
+const nameChecked = document.getElementById('nameChecked');
+const nameError = document.getElementById('nameError');
+const surnameChecked = document.getElementById('surnameChecked');
+const emailChecked = document.getElementById('emailChecked');
+const emailError = document.getElementById('emailError');
+const telChecked = document.getElementById('telChecked');
+const telError = document.getElementById('telError');
+
 
 const slideContent = document.querySelectorAll('.content');
 

@@ -5,7 +5,7 @@ request.send();
 request.addEventListener('load', () => {
     const degreeData = JSON.parse(request.responseText);
     for(let i = 0; i < degreeData.length; i ++) {
-        degrees.innerHTML += `<option>${degreeData[i].title}</option>`
+        degrees.innerHTML += `<option value="${degreeData[i].title}">${degreeData[i].title}</option>`
         console.log(degreeData[i])
     }
 })

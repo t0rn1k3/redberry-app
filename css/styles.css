@@ -4,7 +4,19 @@
     --checked : #98E37E;
     --error : #F02424;
     --opacity : rgba(26, 26, 26, 0.6);
-}   
+}  
+
+/* input validation styles */
+.valid {
+    border: 1px solid var(--checked);
+}
+.invalid {
+    border: 1px solid var(--error);
+}
+.show-icon {
+    display: block;
+}
+
 * {
     margin: 0;
     padding: 0;
@@ -121,9 +133,6 @@ input {
     border-radius: 4px;
     margin: 10px 0;
 }
-input:valid {
-    border: 1px solid var(--checked);
-}
 .validation-logic {
     font-size: 14px;
     color: var(--opacity);
@@ -185,6 +194,7 @@ textarea {
     border: 0;
     border: 1px solid var(--opacity);
     margin-top: 15px;
+    outline: none;
 }
 .button-next {
     background-color: #6B40E3;

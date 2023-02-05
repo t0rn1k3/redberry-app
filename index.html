@@ -44,8 +44,8 @@
                                                     id="firstName" 
                                                     name="firstName"  
                                                     required>
-                                                <i class="fa-solid fa-circle-check"></i>
-                                                <i class="fa-solid fa-triangle-exclamation"></i>
+                                                <i class="fa-solid fa-circle-check" id="nameChecked"></i>
+                                                <i class="fa-solid fa-triangle-exclamation" id="nameError"></i>
                                             </div>
                                             <p class="validation-logic">მინიმუმ 2 ასო, ქართული ასოები</p>
                                         </div>
@@ -57,7 +57,7 @@
                                                     id="lastName" 
                                                     name="lastName"  
                                                     required>
-                                                <i class="fa-solid fa-circle-check"></i>
+                                                <i class="fa-solid fa-circle-check" id="surnameChecked"></i>
                                                 <i class="fa-solid fa-triangle-exclamation"></i>
                                             </div>
                                             <p class="validation-logic">მინიმუმ 2 ასო, ქართული ასოები</p>
@@ -78,8 +78,8 @@
                                         <label class="label" for="email">ელ.ფოსტა</label>
                                         <div class="icons input">
                                             <input type="email" id="email" name="email" placeholder="example@redberry.ge" required>
-                                            <i class="fa-solid fa-circle-check"></i>
-                                            <i class="fa-solid fa-triangle-exclamation"></i>
+                                            <i class="fa-solid fa-circle-check" id="emailChecked"></i>
+                                            <i class="fa-solid fa-triangle-exclamation" id="emailError"></i>
                                         </div>
                                         <p class="validation-logic">უნდა მთავრდებოდეს @redberry.ge-ით</p>
                                     </div>
@@ -87,8 +87,8 @@
                                         <label class="label" for="phone">მობილურის ნომერი</label>
                                         <div class="icons input">
                                             <input type="number" id="phone" name="phone" placeholder="+995 5** ** ** **" required>
-                                            <i class="fa-solid fa-circle-check"></i>
-                                            <i class="fa-solid fa-triangle-exclamation"></i>
+                                            <i class="fa-solid fa-circle-check" id="telChecked"></i>
+                                            <i class="fa-solid fa-triangle-exclamation" id="telError"></i>
                                         </div>
                                         <p class="validation-logic">უნდა აკმაყოფილებდეს ქართული მობილურის ნომრის ფორმატს</p>
                                     </div>
@@ -226,7 +226,7 @@
 
 
     <script src="js/scripts.js"></script>
-    <script src="js/keyUp.js"></script>
+    <script type="module" src="js/keyUp.js"></script>
     <script src="js/slider.js"></script>
     <script src="js/getApi.js"></script>
 </body>

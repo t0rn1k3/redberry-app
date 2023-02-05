@@ -1,12 +1,7 @@
-let currentActive = 1;
+import { validateForm } from "./validation.js";
 
 function keyUpName() {
-    if (fName.value.length > 2) {
-        fName.style.border = '1px solid #98E37E';  
-    }
-    if (lName.value.length > 2) {
-        lName.style.border = '1px solid #98E37E';  
-    }
+    validateForm();
     typedFirstName.innerHTML = fName.value;
     typedLastName.innerHTML = lName.value;
     typedEmail.innerHTML = email.value;
@@ -28,6 +23,9 @@ tel.addEventListener('keyup', () => {
     keyUpName();
 })
 aboutMe.addEventListener('keyup', () => {
+    keyUpName();
+})
+email.addEventListener('keyup', () => {
     keyUpName();
 })
 
