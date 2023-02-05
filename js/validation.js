@@ -1,13 +1,22 @@
+import { stopMove } from "./slider.js";
+
 export function validateNames() {
+    let letters = /^[ა-ჰ]+$/
 
     //input first name and last name check
 
-    if (fName.value.length > 1) {
+    if (fName.value.length > 1 && 
+        fName.value.match(letters)) {
         fName.classList.add('valid');
         nameChecked.style.display = 'block';
+        fName.classList.remove('invalid')
+        nameError.style.display = 'none'
     }else {
         fName.classList.remove('valid');
         nameChecked.style.display = 'none';
+        fName.classList.add('invalid')
+        nameError.style.display = 'block';
+        stopMove();
     }
     if (lName.value.length > 1) {
         lName.classList.add('valid');  
@@ -15,6 +24,7 @@ export function validateNames() {
     }else {
         lName.classList.remove('valid');
         surnameChecked.style.display = 'none';
+        stopMove();
     }
 
     //about me textarea check
@@ -43,7 +53,8 @@ export  function validateEmail() {
             email.classList.remove('valid')
             email.classList.add('invalid');
             emailError.style.display = 'block';
-            emailChecked.style.display = 'none'
+            emailChecked.style.display = 'none';
+            stopMove();
         }
 }
 
@@ -52,7 +63,8 @@ export function validatePhone() {
 
         //phone check
 
-        if (tel.value.startsWith(geoNumber)) {
+        if (tel.value.startsWith(geoNumber) && 
+            tel.value.length == 12) {
             tel.classList.add('valid')
             telChecked.style.display = 'block';
             tel.classList.remove('invalid')
@@ -61,9 +73,8 @@ export function validatePhone() {
             tel.classList.remove('valid')
             tel.classList.add('invalid');
             telError.style.display = 'block';
-            telChecked.style.display = 'none'
-
-
+            telChecked.style.display = 'none';
+            stopMove();
         }
 }
 

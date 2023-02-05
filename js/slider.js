@@ -36,6 +36,9 @@ function moveToPrev() {
 
     newSlidePosition();
 }
+ export function stopMove() {
+    slidePosition = -1;
+ }
 
 
 buttonNext.addEventListener('click', () => {

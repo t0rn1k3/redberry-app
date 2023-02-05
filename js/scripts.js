@@ -39,5 +39,11 @@ start.addEventListener('click', () => {
     personalInfo.style.display = 'flex';
 })
 
+console.log('თორნიკე')
+console.log('ბურჯანაძე')
+console.log('expample@redberry.ge')
+console.log('995555462090')
+
+
 
 
