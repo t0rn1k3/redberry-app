@@ -30,6 +30,7 @@ function moveToNext() {
 function moveToPrev() {
     if (slidePosition === 0) {
         slidePosition = 0;
+        buttonPrev.style.display = 'none'
     }else {
         slidePosition--;
     }

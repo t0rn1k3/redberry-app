@@ -1,10 +1,19 @@
 import { stopMove } from "./slider.js";
 
+let letters = /^[ა-ჰ]+$/;
+
+export function validateForm() {
+    validateNames();
+    validateEmail();
+    validatePhone();
+    validatePosition();
+    validateEmployer();
+    validateDate();
+    validateDescription();
+}
+
+
 export function validateNames() {
-    let letters = /^[ა-ჰ]+$/
-
-    //input first name and last name check
-
     if (fName.value.length > 1 && 
         fName.value.match(letters)) {
         fName.classList.add('valid');
@@ -18,12 +27,17 @@ export function validateNames() {
         nameError.style.display = 'block';
         stopMove();
     }
-    if (lName.value.length > 1) {
+    if (lName.value.length > 1 && 
+        lName.value.match(letters)) {
         lName.classList.add('valid');  
         surnameChecked.style.display = 'block';
+        lName.classList.remove('invalid');
+        surnameError.style.display = 'none';
     }else {
         lName.classList.remove('valid');
         surnameChecked.style.display = 'none';
+        lName.classList.add('invalid');
+        surnameError.style.display = 'block'
         stopMove();
     }
 
@@ -42,8 +56,6 @@ export function validateNames() {
 export  function validateEmail() {
     const emailEnding = 'redberry.ge';
 
-            //email check
-
         if (email.value.endsWith(emailEnding)) {
             email.classList.add('valid');
             emailChecked.style.display = 'block';
@@ -61,8 +73,6 @@ export  function validateEmail() {
 export function validatePhone() {
     const geoNumber = '995';
 
-        //phone check
-
         if (tel.value.startsWith(geoNumber) && 
             tel.value.length == 12) {
             tel.classList.add('valid')
@@ -79,7 +89,62 @@ export function validatePhone() {
 }
 
 
+export function validatePosition() {
+    if (position.value.length > 1) {
+        position.classList.add('valid');
+        positionChecked.style.display = 'block';
+        position.classList.remove('invalid')
+        positionError.style.display = 'none'
+    }else {
+        position.classList.remove('valid');
+        positionChecked.style.display = 'none';
+        position.classList.add('invalid')
+        positionError.style.display = 'block';
+        stopMove();
+    }
+}
 
+export function validateEmployer() {
+    if (employer.value.length > 1) {
+        employer.classList.add('valid');
+        employerChecked.style.display = 'block';
+        employer.classList.remove('invalid')
+        employerError.style.display = 'none'
+    }else {
+        employer.classList.remove('valid');
+        employerChecked.style.display = 'none';
+        employer.classList.add('invalid')
+        employerError.style.display = 'block';
+        stopMove();
+    }
+}
+
+
+export function validateDate() {
+    if (startDate == true &&
+        endingDate == true) {
+        startDate.classList.add('valid');
+        startDate.classList.remove('invalid')
+        endingDate.classList.add('valid');
+        endingDate.classList.remove('invalid')
+    }else {
+        startDate.classList.remove('valid');
+        startDate.classList.add('invalid');
+        endingDate.classList.remove('valid');
+        endingDate.classList.add('invalid');
+        stopMove();
+    }
+}
+
+export function validateDescription() {
+    if (description.value > 0 ) {
+        description.classList.add('valid');
+        description.classList.remove('invalid')
+    }else {
+        description.classList.remove('valid');
+        description.classList.add('invalid');
+    }
+}
 
 
 
