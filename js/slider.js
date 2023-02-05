@@ -1,3 +1,7 @@
+import { validateEmail } from "./validation.js";
+import { validateNames } from "./validation.js";
+import { validatePhone } from "./validation.js";
+
 let slidePosition = 0;
 const totalSlides = slideContent.length;
 
@@ -35,8 +39,12 @@ function moveToPrev() {
 
 
 buttonNext.addEventListener('click', () => {
-    moveToNext()
+    validateNames()
+    validateEmail()
+    validatePhone()
+    moveToNext();
 })
+
 
 buttonPrev.addEventListener('click', () => {
     moveToPrev();

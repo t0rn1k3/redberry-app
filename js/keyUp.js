@@ -1,7 +1,12 @@
-import { validateForm } from "./validation.js";
+import { validateNames } from "./validation.js";
+import { validateEmail } from "./validation.js";
+import { validatePhone } from "./validation.js";
+
 
 function keyUpName() {
-    validateForm();
+    validateNames();
+    validateEmail();
+    validatePhone();
     typedFirstName.innerHTML = fName.value;
     typedLastName.innerHTML = lName.value;
     typedEmail.innerHTML = email.value;
