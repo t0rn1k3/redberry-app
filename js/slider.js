@@ -1,6 +1,15 @@
-import { validateEmail } from "./validation.js";
-import { validateNames } from "./validation.js";
-import { validatePhone } from "./validation.js";
+import { validateExperience, validatePersonalInfo} from "./validation.js";
+
+//start test 
+
+start.addEventListener('click', () => {
+    welcomePage.style.display ='none';
+    personalInfo.style.display = 'flex';
+    refreshButton.style.display = 'flex'
+    if (slidePosition < 1) {
+        buttonPrev.style.display = 'none'
+    }
+})
 
 let slidePosition = 0;
 const totalSlides = slideContent.length;
@@ -11,8 +20,8 @@ function newSlidePosition() {
         slide.classList.add('content-hidden');
     }
     slideContent[slidePosition].classList.add('content-visible');
-}
 
+}
 //move to next button
 
 function moveToNext() {
@@ -21,7 +30,6 @@ function moveToNext() {
     }else {
         slidePosition++;
     }
-
     newSlidePosition();
 }
 
@@ -30,27 +38,51 @@ function moveToNext() {
 function moveToPrev() {
     if (slidePosition === 0) {
         slidePosition = 0;
-        buttonPrev.style.display = 'none'
     }else {
         slidePosition--;
     }
 
     newSlidePosition();
 }
- export function stopMove() {
+ export function stopAtPersonalInfo() {
     slidePosition = -1;
+ }
+ export function stopAtPosition() {
+    slidePosition = 0;
  }
 
 
+ 
+
 buttonNext.addEventListener('click', () => {
-    validateNames()
-    validateEmail()
-    validatePhone()
+    if(slidePosition == 0 ) {
+        validatePersonalInfo()
+    }
+    if (slidePosition == 1 ) {
+        buttonPrev.style.display = 'block'
+        validateExperience()
+    }
+ 
+
     moveToNext();
+    
+    if (slidePosition == 2) {
+        buttonNext.style.display = 'none';
+        submitButton.style.display = 'block'
+   }
+
 })
 
 
 buttonPrev.addEventListener('click', () => {
     moveToPrev();
+    if (slidePosition < 2) {
+        buttonNext.style.display = 'block'
+        submitButton.style.display = 'none'
+    }
+    if (slidePosition < 1) {
+        buttonPrev.style.display = 'none'
+    }
 })
+
 

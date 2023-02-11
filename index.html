@@ -22,6 +22,9 @@
                 რეზიუმეს დამატება
             </div>
         </div>
+        <div class="refresh" id="refreshButton">
+            <i class="fa-solid fa-chevron-left"></i>
+        </div>
 
         <!-- personal information page -->
 
@@ -43,7 +46,7 @@
                                             type="text" 
                                             id="firstName" 
                                             name="firstName"  
-                                            required>
+                                            >
                                         <i class="fa-solid fa-circle-check" id="nameChecked"></i>
                                         <i class="fa-solid fa-triangle-exclamation" id="nameError"></i>
                                     </div>
@@ -56,7 +59,7 @@
                                             type="text" 
                                             id="lastName" 
                                             name="lastName"  
-                                            required>
+                                            >
                                         <i class="fa-solid fa-circle-check" id="surnameChecked"></i>
                                         <i class="fa-solid fa-triangle-exclamation" id="surnameError"></i>
                                     </div>
@@ -77,7 +80,7 @@
                             <div class="email margin">
                                 <label class="label" for="email">ელ.ფოსტა</label>
                                 <div class="icons input">
-                                    <input type="email" id="email" name="email" placeholder="example@redberry.ge" required>
+                                    <input type="email" id="email" name="email" placeholder="example@redberry.ge" >
                                     <i class="fa-solid fa-circle-check" id="emailChecked"></i>
                                     <i class="fa-solid fa-triangle-exclamation" id="emailError"></i>
                                 </div>
@@ -86,7 +89,7 @@
                             <div class="phone margin">
                                 <label class="label" for="phone">მობილურის ნომერი</label>
                                 <div class="icons input">
-                                    <input type="number" id="phone" name="phone" placeholder="+995 5** ** ** **" required>
+                                    <input type="number" id="phone" name="phone" placeholder="995 5** ** ** **" >
                                     <i class="fa-solid fa-circle-check" id="telChecked"></i>
                                     <i class="fa-solid fa-triangle-exclamation" id="telError"></i>
                                 </div>
@@ -102,7 +105,7 @@
                             <div class="margin">
                                 <label class="label" for="position">თანამდებობა</label>
                                 <div class="icons input">
-                                    <input type="text" id="position" name="position" placeholder="დეველოპერი, დიზაინერი, ა.შ." required>
+                                    <input type="text" id="position" name="position" placeholder="დეველოპერი, დიზაინერი, ა.შ." >
                                     <i class="fa-solid fa-circle-check"
                                     id="positionChecked"></i>
                                     <i class="fa-solid fa-triangle-exclamation" id="positionError"></i>
@@ -112,7 +115,7 @@
                             <div class="margin">
                                 <label class="label" for="emloyer">დამსაქმებელი</label>
                                 <div class="icons input">
-                                    <input type="tex" id="employer" name="employer" placeholder="დამსაქმებელი" required>
+                                    <input type="tex" id="employer" name="employer" placeholder="დამსაქმებელი" >
                                     <i class="fa-solid fa-circle-check" id="employerChecked"></i>
                                     <i class="fa-solid fa-triangle-exclamation" id="employerError"></i>
                                 </div>
@@ -126,7 +129,7 @@
                                             type="date" 
                                             id="startDate" 
                                             name="startDate"  
-                                            required>
+                                            >
                                     </div>
                                 </div>
                                 <div class="name">
@@ -136,7 +139,7 @@
                                             type="date" 
                                             id="endingDate" 
                                             name="endingDate"  
-                                            required>
+                                            >
                                     </div>
                                 </div>
                             </div>
@@ -155,11 +158,11 @@
                                 <span>3/3</span>
                             </div>
                             <div class="margin">
-                                <label class="label" for="univercity">სასწავლებელი</label>
+                                <label class="label" for="university">სასწავლებელი</label>
                                 <div class="icons input">
-                                    <input type="text" id="univercity" name="univercity" placeholder="სასწავლებელი" required>
-                                    <i class="fa-solid fa-circle-check"></i>
-                                    <i class="fa-solid fa-triangle-exclamation"></i>
+                                    <input type="text" id="university" name="university" placeholder="სასწავლებელი" >
+                                    <i class="fa-solid fa-circle-check" id="universityChecked"></i>
+                                    <i class="fa-solid fa-triangle-exclamation" id="universityError"></i>
                                 </div>
                                 <p class="validation-logic">მინიმუმ 2 სიმბოლო</p>
                             </div>
@@ -173,13 +176,13 @@
                                     </div>
                                 </div>
                                 <div class="name">
-                                    <label class="label" for="endingDate">დამთავრების რიცხვი</label>
+                                    <label class="label" for="endDate">დამთავრების რიცხვი</label>
                                     <div class="icons input">
                                         <input 
                                             type="date" 
-                                            id="endingDate" 
+                                            id="endDate" 
                                             name="endingDate"  
-                                            required>
+                                            >
                                     </div>
                                 </div>
                             </div>
@@ -187,11 +190,12 @@
                                 <label>აღწერა</label>
                                 <textarea name="description" id="description" cols="30" rows="5" placeholder="როლი თანამდებობაზე და ზოგადი აღწერა"></textarea>
                             </div>
-                            <div class="add-button" id="addunivercity">
+                            <div class="add-button" id="addUniversity">
                                 სხვა სასწავლებლის დამატება
                             </div>
                         </div>
                     </div>
+                    <button type="submit" class="submit-button" id="submitButton">დასრულება</button>
                 </form>
             </div>
             <div class="next-button-cont">
@@ -201,25 +205,39 @@
            </div>
            <div class="second-part">
             <div class="result-first-part">
-                <div>
-                    <div class="typed-names">
-                        <div class="typed-name" id="typedFirstName"></div>
-                        <div class="typed-name" id="typedLastName"></div>
+                <div class="info-picture">
+                    <div>
+                        <div class="typed-names">
+                            <div class="typed-name" id="typedFirstName"></div>
+                            <div class="typed-name" id="typedLastName"></div>
+                        </div>
+                        <div class="typed-contacts">
+                            <div class="typed-email" id="typedEmail"></div>
+                            <div class="typed-tel" id="typedTel"></div>
+                        </div>
+                        <div id="typedAbout" class="typed-about">
+                            <h3></h3>
+                            <div class="typed-about-info" id="typedAboutInfo"></div>
+                        </div>
                     </div>
-                    <div class="typed-contacts">
-                        <div class="typed-email" id="typedEmail"></div>
-                        <div class="typed-tel" id="typedTel"></div>
-                    </div>
-                    <div id="typedAbout" class="typed-about">
-                        <div class="typed-about-info" id="typedAboutInfo"></div>
+                    <div class="uploaded-picture" id="uploadedPicture">
                     </div>
                 </div>
-                <div class="uploaded-picture" id="uploadedPicture">
-                </div>
-                <div class="typed-position" id="typedPosition"></div>
+                <h3></h3>
+                <h4 class="typed-position" id="typedPosition"></h4>
                 <div class="typed-employer" id="typedEmployer"></div>
-                <div class="typed-start-date" id="typedStartDate"></div>
-                <div class="typed-end-date" id="typedEndDate"></div>
+                <div class="start-end">
+                    <div class="typed-start-date" id="typedStartDate"></div>
+                    <div class="typed-end-date" id="typedEndDate"></div>
+                </div>
+                <div class="typed-role" id="typedRole">
+                </div>
+                <h3 id="typedEducation"></h3>
+                <div class="educ">
+                    <h4 class="typed-university" id="typedUniversity"></h4>
+                    <h4 class="typed-degree" id="typedDegree"></h4>
+                </div>
+                <div class="typed-end" id="typedEnd"></div>
                 <div class="typed-description" id="typedDescription"></div>
             </div>
             <div class="logo2">
@@ -236,5 +254,6 @@
     <script type="module" src="js/slider.js"></script>
     <script type="module" src="js/validation.js"></script>
     <script src="js/getApi.js"></script>
+    <script src="js/postData.js"></script>
 </body>
 </html>
