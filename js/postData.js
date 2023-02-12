@@ -26,7 +26,7 @@ function submitForm(e) {
                 description : description.value
             }
         ], 
-        // image : file.value,
+        image : file.value,
         about_me : aboutMe.value
     }
 
@@ -41,7 +41,7 @@ function submitForm(e) {
             'accept' : 'application/json',
             'Content-Type': 'application/json'
         },
-        body: JSON.stringify({cv})
+        body: JSON.stringify(cv)
     })
 
     localStorage.setItem('UsersCV', JSON.stringify(cvData))

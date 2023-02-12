@@ -75,16 +75,17 @@ endDate.addEventListener('keyup', () => {
 
 
 
+file.addEventListener('change', (e) => {
+   if (window.File && window.FileReader && window.FileList) {
+    const file = e.target.files
+    const reader = new FileReader
+    reader.addEventListener('load', (e) => {
+        const picFile = e.target
+        uploadedPicture.innerHTML = `<img src="${picFile.result}" alt="profile">`
+    })
+    reader.readAsDataURL(file[0])
+   }else{
+    alert('your browser does not support the API')
+   }
+})
 
-// file.addEventListener('change', () => {
-//     const image = this.files[0];
-//     const reader = new FileReader();
-//     reader.onload = () => {
-//         const imgUrl = reader.result;
-//         const img = document.createElement('img')
-//         img.src = imgUrl;
-//         uploadedPicture.appendChild(img)
-//     }  
-    
-//     reader.readAsDataURL(image)
-// })
