@@ -19,8 +19,8 @@ function keyUpName() {
     typedDegree.innerHTML =  degrees.options[degrees.selectedIndex].innerHTML
     typedDescription.innerHTML = description.value 
     typedStartDate.innerHTML = startDate.value
-    endDate.innerHTML = endDate.value
-    endingDate.innerHTML = endingDate.value
+    typedEnd.innerHTML = endDate.value
+    typedEndDate.innerHTML = endingDate.value
 }
 
 
@@ -82,6 +82,7 @@ file.addEventListener('change', (e) => {
     reader.addEventListener('load', (e) => {
         const picFile = e.target
         uploadedPicture.innerHTML = `<img src="${picFile.result}" alt="profile">`
+        localStorage.setItem('thumbnail', reader.result);
     })
     reader.readAsDataURL(file[0])
    }else{

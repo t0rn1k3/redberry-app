@@ -6,7 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <script src="https://kit.fontawesome.com/1d77aaa3bf.js" crossorigin="anonymous"></script>
     <script src="https://cdn.jsdelivr.net/npm/swiper@9/swiper-element-bundle.min.js"></script>
-    <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="./assets/styles/css/styles.css">
     <title>Tornike Burjanadze</title>
 </head>
 <body>
@@ -46,7 +46,7 @@
                                             type="text" 
                                             id="firstName" 
                                             name="firstName" 
- 
+                                            required
                                             >
                                         <i class="fa-solid fa-circle-check" id="nameChecked"></i>
                                         <i class="fa-solid fa-triangle-exclamation" id="nameError"></i>
@@ -60,6 +60,7 @@
                                             type="text" 
                                             id="lastName" 
                                             name="lastName"  
+                                            required
                                             >
                                         <i class="fa-solid fa-circle-check" id="surnameChecked"></i>
                                         <i class="fa-solid fa-triangle-exclamation" id="surnameError"></i>
@@ -72,7 +73,7 @@
                                     <p>პირადი ფოტოს ატვირთვა</p>              
                                     <p class="upload">ატვირთვა</p>
                                 </label>
-                                <input type="file" name="file" id="file" accept="image/*">
+                                <input type="file" name="file" id="file" accept="image/*" required>
                             </div>
                             <div class="textarea">
                                 <label>ჩემ შესახებ (არასავალდებულო)</label>
@@ -81,7 +82,7 @@
                             <div class="email margin">
                                 <label class="label" for="email">ელ.ფოსტა</label>
                                 <div class="icons input">
-                                    <input type="email" id="email" name="email" placeholder="example@redberry.ge" >
+                                    <input type="email" id="email" name="email" placeholder="example@redberry.ge" required >
                                     <i class="fa-solid fa-circle-check" id="emailChecked"></i>
                                     <i class="fa-solid fa-triangle-exclamation" id="emailError"></i>
                                 </div>
@@ -90,7 +91,7 @@
                             <div class="phone margin">
                                 <label class="label" for="phone">მობილურის ნომერი</label>
                                 <div class="icons input">
-                                    <input type="number" id="phone" name="phone" placeholder="995 5** ** ** **" >
+                                    <input type="text" id="phone" name="phone" placeholder="+995 5** ** ** **" required>
                                     <i class="fa-solid fa-circle-check" id="telChecked"></i>
                                     <i class="fa-solid fa-triangle-exclamation" id="telError"></i>
                                 </div>
@@ -106,7 +107,7 @@
                             <div class="margin">
                                 <label class="label" for="position">თანამდებობა</label>
                                 <div class="icons input">
-                                    <input type="text" id="position" name="position" placeholder="დეველოპერი, დიზაინერი, ა.შ." >
+                                    <input type="text" id="position" name="position" placeholder="დეველოპერი, დიზაინერი, ა.შ." required>
                                     <i class="fa-solid fa-circle-check"
                                     id="positionChecked"></i>
                                     <i class="fa-solid fa-triangle-exclamation" id="positionError"></i>
@@ -116,7 +117,7 @@
                             <div class="margin">
                                 <label class="label" for="emloyer">დამსაქმებელი</label>
                                 <div class="icons input">
-                                    <input type="tex" id="employer" name="employer" placeholder="დამსაქმებელი" >
+                                    <input type="tex" id="employer" name="employer" placeholder="დამსაქმებელი" required>
                                     <i class="fa-solid fa-circle-check" id="employerChecked"></i>
                                     <i class="fa-solid fa-triangle-exclamation" id="employerError"></i>
                                 </div>
@@ -130,6 +131,7 @@
                                             type="date" 
                                             id="startDate" 
                                             name="startDate"  
+                                            required
                                             >
                                     </div>
                                 </div>
@@ -140,13 +142,15 @@
                                             type="date" 
                                             id="endingDate" 
                                             name="endingDate"  
+                                            required
                                             >
                                     </div>
                                 </div>
                             </div>
                             <div class="textarea">
                                 <label>აღწერა</label>
-                                <textarea name="role" id="role" cols="30" rows="5" placeholder="როლი თანამდებობაზე და ზოგადი აღწერა"></textarea>
+                                <textarea name="role" id="role" cols="30" rows="5" 
+                                placeholder="როლი თანამდებობაზე და ზოგადი აღწერა" required></textarea>
                             </div>
                             <div class="add-position" id="addPosition">
                                 მეტი გამოცდილების დამატებას
@@ -161,7 +165,8 @@
                             <div class="margin">
                                 <label class="label" for="university">სასწავლებელი</label>
                                 <div class="icons input">
-                                    <input type="text" id="university" name="university" placeholder="სასწავლებელი" >
+                                    <input type="text" id="university" name="university" placeholder="სასწავლებელი"
+                                    required >
                                     <i class="fa-solid fa-circle-check" id="universityChecked"></i>
                                     <i class="fa-solid fa-triangle-exclamation" id="universityError"></i>
                                 </div>
@@ -171,7 +176,7 @@
                                 <div class="name">
                                     <label class="label" for="degree">ხარისხი</label>
                                     <div class="icons input">
-                                        <select name="degrees" id="degrees">
+                                        <select name="degrees" id="degrees" required>
                                             <option>აირჩიეთ ხარისხი</option>
                                         </select>
                                     </div>
@@ -183,13 +188,14 @@
                                             type="date" 
                                             id="endDate" 
                                             name="endingDate"  
+                                            required
                                             >
                                     </div>
                                 </div>
                             </div>
                             <div class="textarea">
                                 <label>აღწერა</label>
-                                <textarea name="description" id="description" cols="30" rows="5" placeholder="როლი თანამდებობაზე და ზოგადი აღწერა"></textarea>
+                                <textarea name="description" id="description" cols="30" rows="5" placeholder="როლი თანამდებობაზე და ზოგადი აღწერა" required></textarea>
                             </div>
                             <div class="add-button" id="addUniversity">
                                 სხვა სასწავლებლის დამატება
@@ -207,7 +213,7 @@
            <div class="second-part">
             <div class="result-first-part">
                 <div class="info-picture">
-                    <div>
+                    <div class="typed-full-name">
                         <div class="typed-names">
                             <div class="typed-name" id="typedFirstName"></div>
                             <div class="typed-name" id="typedLastName"></div>

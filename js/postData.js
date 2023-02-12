@@ -18,10 +18,10 @@ function submitForm(e) {
                 description : role.value
             }
         ],
-        education : [
+        educations : [
             {
                 institute : university.value,
-                degree : degrees.value,
+                degree_id : degrees.value,
                 due_date : endDate.value,
                 description : description.value
             }
@@ -53,3 +53,4 @@ function submitForm(e) {
 form.addEventListener('submit', submitForm)
 
 
+console.log(degrees)

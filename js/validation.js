@@ -17,7 +17,7 @@ export function validateExperience() {
 export function validateEducation() {
     validateUniversity()
     validateDescription();
-    validateDate()
+    // validateDate()
 }
 
 
@@ -82,20 +82,21 @@ export  function validateEmail() {
 }
 
 export function validatePhone() {
-    const geoNumber = '995';
+    const geoNumber = '+9955' ;
 
-        if (!tel.value.startsWith(geoNumber) && 
-            tel.value.length != 12) {
+        if (tel.value.startsWith(geoNumber) &&
+            tel.value.length == 13) {
+                tel.classList.add('valid')
+                telChecked.style.display = 'block';
+                tel.classList.remove('invalid')
+                telError.style.display = 'none';
+        }else {
             tel.classList.remove('valid')
             tel.classList.add('invalid');
             telError.style.display = 'block';
             telChecked.style.display = 'none';
             stopAtPersonalInfo();
-        }else {
-            tel.classList.add('valid')
-            telChecked.style.display = 'block';
-            tel.classList.remove('invalid')
-            telError.style.display = 'none';
+            
         }
 }
 
@@ -131,7 +132,7 @@ export function validateEmployer() {
         
     }
 }
-
+console.log(startDate.value)
 
 export function validateDate() {
     if (startDate == true &&
